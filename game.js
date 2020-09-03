@@ -46,6 +46,13 @@ $(document).on("keypress",function(){
     }
 })
 
+$("#level-title").on("click",function(){
+    if (level===0){
+        $("h1").text("Initializing...")
+        setTimeout(nextSequence,500);
+    }
+})
+
 function checkAnswer(currentLevel){
     if(gamePattern[currentLevel]==userClickedPattern[currentLevel]){
         if(gamePattern.length == userClickedPattern.length){
